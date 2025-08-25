@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better data is priceless</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+    <div class="container">
+        <!-- Decorative graphic in top right corner -->
+        <div class="decorative-graphic">
+            <div class="logo-icon">
+                <div class="blue-shape"></div>
+                <div class="purple-shape">
+                    <div class="orange-mark"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="content">
+            <h1 class="main-heading">Better data is priceless.</h1>
+            
+            <div class="text-content">
+                <p class="paragraph">
+                    While this calculator focuses on measurable cost savings, it doesn't capture the far greater cost of poor data quality – failed libraries, dropouts, and the time, money, and uncertainty involved in repeating runs.
+                </p>
+                
+                <p class="paragraph">
+                    Biological signal preservation is critical. By eliminating error-prone and biased steps, iconPCR helps you interpret each sample as close as possible to its original biology – enabling more reliable research, diagnostics, and downstream decisions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Cost Savings Calculator Section -->
+        <div class="calculator-section">
+            <h2 class="calculator-title">Cost Savings Calculator</h2>
+            
+            <!-- Input Cards -->
+            <div class="input-cards">
+                <div class="input-card">
+                    <div class="step-number">1</div>
+                    <label>Select Application</label>
+                    <select class="dropdown">
+                        <option value="WGS" selected>WGS</option>
+                        <option value="RNAseq">RNAseq</option>
+                        <option value="16s Full-length Microbiome">16s Full-length Microbiome</option>
+                        <option value="Single Cell">Single Cell</option>
+                    </select>
+                </div>
+                
+                <div class="input-card">
+                    <div class="step-number">2</div>
+                    <label>Number of Samples per month</label>
+                    <div class="counter">
+                        <button class="counter-btn minus">-</button>
+                        <span class="counter-value">960</span>
+                        <button class="counter-btn plus">+</button>
+                    </div>
+                </div>
+                
+                <div class="input-card">
+                    <div class="step-number">3</div>
+                    <label>Select Sequencing Savings (%)</label>
+                    <div class="slider-container">
+                        <input type="range" class="slider" min="0" max="20" value="10" step="5">
+                        <div class="slider-labels">
+                            <span>0</span>
+                            <span>5</span>
+                            <span>10</span>
+                            <span>15</span>
+                            <span>20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Information Text -->
+            <div class="info-text">
+                <span class="info-icon">i</span>
+                <p>Sequencing saving results from reduction in PCR duplicates, lower unmapped reads, lower artifacts like chimeras etc as you avoid overamplification using AutoNorm on iconPCR.</p>
+            </div>
+            
+            <!-- Results Section -->
+            <div class="results-section">
+                <h3 class="results-title">Your Projected Savings</h3>
+                
+                <div class="result-cards">
+                    <div class="result-card">
+                        <div class="result-icon">$</div>
+                        <label>MONTHLY SAVINGS</label>
+                        <div class="result-value"></div>
+                        <div class="result-subtitle">Estimated monthly savings</div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-icon">↗</div>
+                        <label>ANNUAL IMPACT</label>
+                        <div class="result-value"></div>
+                        <div class="result-subtitle">Total yearly savings</div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <div class="result-icon">↻</div>
+                        <label>INVESTMENT RECOVERY</label>
+                        <div class="result-value"></div>
+                        <div class="result-subtitle">Time to breakeven</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Cost Analysis Section -->
+        <div class="cost-analysis-section">
+            <h2 class="analysis-title">Detailed Cost Analysis</h2>
+            
+            <div class="table-container">
+                <table class="cost-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Standard</th>
+                            <th>iconPCR</th>
+                            <th>Cost Savings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sample Quantification + Normalization</td>
+                            <td>$100.91</td>
+                            <td>$0.00</td>
+                            <td class="savings positive">$100.91</td>
+                        </tr>
+                        <tr>
+                            <td>Library Prep</td>
+                            <td>$3,033.35</td>
+                            <td>$3,033.40</td>
+                            <td class="savings negative">-$0.05</td>
+                        </tr>
+                        <tr>
+                            <td>SPRI Cleanup</td>
+                            <td>$153.58</td>
+                            <td>$3.59</td>
+                            <td class="savings positive">$149.99</td>
+                        </tr>
+                        <tr>
+                            <td>Library Quant + Normalization</td>
+                            <td>$249.75</td>
+                            <td>$14.95</td>
+                            <td class="savings positive">$234.80</td>
+                        </tr>
+                        <tr>
+                            <td>Labor ($150/hr)</td>
+                            <td>$1,087.50</td>
+                            <td>$525.00</td>
+                            <td class="savings positive">$562.50</td>
+                        </tr>
+                        <tr>
+                            <td>Sequencing (25B)</td>
+                            <td>$30,720.00</td>
+                            <td>$27,648.00</td>
+                            <td class="savings positive">$3,072.00</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td><strong>Total Impact</strong></td>
+                            <td><strong>$30,720.00</strong></td>
+                            <td><strong>$27,648.00</strong></td>
+                            <td class="savings positive"><strong>$3,072.00</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Assumptions Section -->
+        <div class="assumptions-section">
+            <h2 class="assumptions-title">Assumptions</h2>
+            
+            <div class="assumptions-list">
+                <div class="assumption-item">
+                    <span class="bullet">•</span>
+                    <p>WGS, RNAseq and 16s Microbiome savings are calculated for 96 samples per batch</p>
+                </div>
+                
+                <div class="assumption-item">
+                    <span class="bullet">•</span>
+                    <p>Single cell cost savings are calculated for 8 samples per batch</p>
+                </div>
+                
+                <div class="assumption-item">
+                    <span class="bullet">•</span>
+                    <p>All prices assume list price without volume discounts or negotiation</p>
+                </div>
+                
+                <div class="assumption-item">
+                    <span class="bullet">•</span>
+                    <p>iconPCR price used for this calculator is USD 120,000</p>
+                </div>
+            </div>
+            
+            <div class="call-to-action">
+                <p class="cta-text">Want to dive deeper into iconPCR?</p>
+                <a href="https://www.n6tec.com" class="cta-link" target="_blank">Learn more at www.n6tec.com</a>
+            </div>
+        </div>
+
+        <!-- Bottom horizontal line -->
+        <div class="bottom-line"></div>
+    </div>
+
+    <script>
+        console.log('JavaScript is running!');
+        
+        // Counter functionality
+        let currentValue = 960;
+        const counterValue = document.querySelector('.counter-value');
+        const minusBtn = document.querySelector('.minus');
+        const plusBtn = document.querySelector('.plus');
+        const slider = document.querySelector('.slider');
+        
+        console.log('Elements found:', { counterValue, minusBtn, plusBtn, slider });
+
+        function updateCounter() {
+            console.log('updateCounter called, currentValue:', currentValue);
+            counterValue.textContent = currentValue.toLocaleString();
+            calculateSavings();
+        }
+
+        minusBtn.addEventListener('click', function() {
+            console.log('Minus button clicked');
+            if (currentValue >= 96) {
+                currentValue -= 96;
+                updateCounter();
+            }
+        });
+
+        plusBtn.addEventListener('click', function() {
+            console.log('Plus button clicked');
+            currentValue += 96;
+            updateCounter();
+        });
+
+                   // Slider functionality
+           slider.addEventListener('input', function() {
+               console.log('Slider changed to:', slider.value);
+               updateSliderFill();
+               calculateSavings();
+           });
+
+           // Update slider fill based on current value
+           function updateSliderFill() {
+               const value = slider.value;
+               const max = slider.max;
+               const percentage = (value / max) * 100;
+               slider.style.background = `linear-gradient(to right, #000000 0%, #000000 ${percentage}%, #e0e0e0 ${percentage}%, #e0e0e0 100%)`;
+           }
+
+        // Calculate savings function
+        function calculateSavings() {
+            console.log('calculateSavings called');
+            const samples = currentValue;
+            const savingsPercent = parseFloat(slider.value);
+            
+            console.log('Calculating with:', { samples, savingsPercent });
+            
+            // Calculate monthly savings based on inputs
+            // At 960 samples and 10% savings, monthly savings = $41,201.50
+            const monthlySavings = (samples * 429.1822916666667 * savingsPercent) / 100;
+            const annualSavings = monthlySavings * 12;
+            
+            console.log('Calculated values:', { monthlySavings, annualSavings });
+            
+            // Investment recovery calculation (adjusted to ensure 2 months)
+            const investmentAmount = 82402.99;
+            const monthsToRecovery = Math.ceil(investmentAmount / monthlySavings);
+            
+            console.log('Investment recovery:', monthsToRecovery);
+            
+            // Update the result cards with calculated values
+            const result1 = document.querySelector('.result-card:nth-child(1) .result-value');
+            const result2 = document.querySelector('.result-card:nth-child(2) .result-value');
+            const result3 = document.querySelector('.result-card:nth-child(3) .result-value');
+            
+            console.log('Result elements found:', { result1, result2, result3 });
+            
+            if (result1 && result2 && result3) {
+                result1.textContent = `$${monthlySavings.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+                result2.textContent = `$${annualSavings.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+                result3.textContent = `${monthsToRecovery} Month${monthsToRecovery !== 1 ? 's' : ''}`;
+                console.log('Results updated successfully!');
+            } else {
+                console.log('Some result elements not found!');
+            }
+        }
+
+                   // Set initial values and calculate
+           console.log('Setting initial values...');
+           slider.value = 10; // Set slider to 10%
+           console.log('Slider set to:', slider.value);
+           updateSliderFill(); // Update the slider fill
+           updateCounter(); // This will calculate and display the initial results
+           console.log('Initial calculation complete');
+    </script>
+</body>
+</html>
